@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 
 class Location extends Component {
 	state = {
@@ -6,12 +7,16 @@ class Location extends Component {
 		error: null
 	};
 
-	componentDidMount() {
+	async componentDidMount() {
+		// try {
+		// 	const res = await axios.get('https://ipapi.co/json');
+		// 	console.log(res);
+		// } catch (err) {
+		// 	console.log(err.message);
+		// }
 		window.navigator.geolocation.getCurrentPosition(
 			pos => {
-				this.setState({ location: pos.coords.latitude }, () => {
-					console.log(this.state.location);
-				});
+				this.setState({ location: pos.coords.latitude });
 			},
 			err => {
 				this.setState({ error: err.message });
