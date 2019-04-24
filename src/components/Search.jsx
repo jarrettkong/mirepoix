@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Search extends Component {
 	state = {
 		location: '',
-		query: ''
+		term: ''
 	};
 
 	_handleChange = e => {
@@ -29,8 +29,8 @@ class Search extends Component {
 				/>
 				<label htmlFor="Search-form-query">Name</label>
 				<input
-					name="query"
-					value={this.state.query}
+					name="term"
+					value={this.state.term}
 					type="text"
 					id="Search-form-query"
 					placeholder="Restaurant"
