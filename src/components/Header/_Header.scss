@@ -1,0 +1,39 @@
+@import '../../util/colors.scss';
+
+.Header {
+	display: flex;
+	flex-direction: row;
+	padding: 0 20px;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.Header-logo {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	& span {
+		color: $main-color;
+	}
+}
+
+.Header-button {
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 2px;
+	font-weight: 600;
+	&:visited {
+		color: inherit;
+	}
+	&:focus {
+		outline: transparent;
+	}
+}
+
+.signup-button {
+	color: white;
+	background-color: $main-color;
+	&:visited {
+		color: white;
+	}
+}
