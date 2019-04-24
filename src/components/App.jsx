@@ -5,7 +5,8 @@ import Search from './Search';
 import Location from './Location';
 import './App.scss';
 
-const yelpKey = process.env.REACT_APP_YELP_API_KEY;
+const YELP_API_KEY = process.env.REACT_APP_YELP_API_KEY;
+const YELP_BASE_URL = process.env.REACT_APP_YELP_BASE_URL;
 
 class App extends Component {
 	state = {
@@ -14,9 +15,9 @@ class App extends Component {
 
 	getResults = async ({ term, location }) => {
 		try {
-			const res = await axios.get(process.env.REACT_APP_YELP_BASE_URL, {
+			const res = await axios.get(YELP_BASE_URL, {
 				headers: {
-					Authorization: `Bearer ${yelpKey}`
+					Authorization: `Bearer ${YELP_API_KEY}`
 				},
 				params: {
 					term,
