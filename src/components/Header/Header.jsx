@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dns as Logo } from '@material-ui/icons';
+import { Dns as HeaderIcon } from '@material-ui/icons';
 import Location from '../Location/Location';
 import './_Header.scss';
 
@@ -9,9 +9,9 @@ const Header = () => {
 			<div className="Header-container">
 				<h1 className="Header-logo">
 					<span>
-						<Logo />
+						<HeaderIcon className="Header-icon" />
 					</span>{' '}
-					Culinarian
+					Mirepoix
 				</h1>
 				<Location />
 			</div>

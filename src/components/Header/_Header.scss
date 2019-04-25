@@ -28,9 +28,13 @@
 
 .Header-button {
 	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 10px;
 	border-radius: 4px;
 	font-weight: 600;
+	line-height: 100%;
 	&:visited {
 		color: inherit;
 	}
