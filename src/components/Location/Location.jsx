@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { LocationOnOutlined as LocationIcon } from '@material-ui/icons';
 import './_Location.scss';
-import axios from 'axios';
 import Ipinfo from '../../api/Ipinfo';
 
 class Location extends Component {
@@ -10,15 +9,14 @@ class Location extends Component {
 		error: null
 	};
 
-	// async componentDidMount() {
-	// 	try {
-	// 		const res = await Ipinfo.get('/geo');
-	// 		console.log(res);
-	// 		this.setState({ location: res.data.city });
-	// 	} catch (err) {
-	// 		console.log(err.message);
-	// 	}
-	// }
+	async componentDidMount() {
+		try {
+			const res = await Ipinfo.get('/json');
+			this.setState({ location: res.data.city });
+		} catch (err) {
+			this.setState({ error: err });
+		}
+	}
 
 	render() {
 		if (this.state.location) {

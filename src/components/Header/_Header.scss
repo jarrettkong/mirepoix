@@ -5,9 +5,16 @@
 	flex-direction: row;
 	padding: 0 20px;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	height: 60px;
 	background-color: #ffffff;
+}
+
+.Header-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 25px;
+	justify-items: center;
 }
 
 .Header-logo {
@@ -42,4 +49,5 @@
 
 .login-button {
 	border: 1px solid $body-copy-color;
+	width: 100%;
 }
