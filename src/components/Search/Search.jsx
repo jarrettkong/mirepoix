@@ -19,29 +19,36 @@ class Search extends Component {
 	render() {
 		return (
 			<section className="Search">
-				<form className="Search-form" onSubmit={this._handleSubmit}>
-					<label htmlFor="Search-form-city">City</label>
-					<input
-						name="location"
-						value={this.state.location}
-						type="text"
-						id="Search-form-city"
-						placeholder="Location"
-						className="Search-form-input"
-						onChange={this._handleChange}
-					/>
-					<label htmlFor="Search-form-query">Name</label>
-					<input
-						name="term"
-						value={this.state.term}
-						type="text"
-						id="Search-form-query"
-						placeholder="Restaurant"
-						className="Search-form-input"
-						onChange={this._handleChange}
-					/>
-					<input type="submit" className="Search-submit-btn" value="Search" />
-				</form>
+				<div className="Search-form-wrapper">
+				<h2 className="Search-tagline">Find the perfect meal tonight</h2>
+					<form className="Search-form" onSubmit={this._handleSubmit}>
+						<div className="Search-form-input-wrapper">
+							<label htmlFor="Search-form-city">City</label>
+							<input
+								name="location"
+								value={this.state.location}
+								type="text"
+								id="Search-form-city"
+								placeholder="Location"
+								className="Search-form-input"
+								onChange={this._handleChange}
+							/>
+						</div>
+						<div className="Search-form-input-wrapper">
+							<label htmlFor="Search-form-query">Name</label>
+							<input
+								name="term"
+								value={this.state.term}
+								type="text"
+								id="Search-form-query"
+								placeholder="Restaurant"
+								className="Search-form-input"
+								onChange={this._handleChange}
+							/>
+						</div>
+						<input type="submit" className="Search-submit-btn" value="Search" />
+					</form>
+				</div>
 			</section>
 		);
 	}

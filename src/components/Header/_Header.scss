@@ -6,6 +6,8 @@
 	padding: 0 20px;
 	align-items: center;
 	justify-content: space-evenly;
+	height: 60px;
+	background-color: #ffffff;
 }
 
 .Header-logo {
@@ -20,7 +22,7 @@
 .Header-button {
 	text-decoration: none;
 	padding: 10px;
-	border-radius: 2px;
+	border-radius: 4px;
 	font-weight: 600;
 	&:visited {
 		color: inherit;
@@ -36,4 +38,8 @@
 	&:visited {
 		color: white;
 	}
+}
+
+.login-button {
+	border: 1px solid $body-copy-color;
 }

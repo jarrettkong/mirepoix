@@ -1,43 +1,61 @@
 @import '../../util/colors';
 
 .Search {
-	height: 400px;
+	height: 500px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url('https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80');
+	background: linear-gradient(hsla(0,0,0,0.5), hsla(0,0,0,0.5)), url('https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.Search-tagline {
+	color: white;
+	font-size: 50px;
 }
 
 .Search-form {
 	width: 1000px;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 
 	& label {
 		font-size: 20px;
 		color: white;
 		font-weight: 600;
+		margin-bottom: 5px;
+	}
+	& > * {
+		margin: 0 10px;
 	}
 }
 
 .Search-form-input {
-	height: 40px;
+	height: 45px;
 	border: 0;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 15px;
 	font-size: 20px;
 	font-weight: 300;
+	width: 300px;
 	color: $body-copy-color;
 	&:focus {
 		outline: transparent;
 	}
 }
 
+.Search-form-input-wrapper > * {
+	display: block;
+	text-align: left;
+}
+
 .Search-submit-btn {
 	padding: 10px;
+	height: 45px;
+	width: 100px;
 	line-height: 100%;
 	color: white;
 	font-weight: 600;
@@ -46,7 +64,7 @@
 	font-size: 20px;
 	justify-content: center;
 	border: 0;
-	border-radius: 3px;
+	border-radius: 4px;
 	cursor: pointer;
 	align-items: center;
 	&:focus {
